@@ -2,22 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var arr=["Android","Blackberry","Iphone","Windows Phone"]
+  var arr1=[{name:"Samsung",style:"square"},{name:"HTC",style:"square"},{name:"Miceomax",style:"round"},{name:"Apple",style:"circle"}]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Mobile Operating System</h1>
+      <ul>
+        {arr.map((e)=>{
+          return <li>
+            {e}
+          </li>
+        })}
+      </ul>
+      <h1>Mobile Manufactures</h1>
+      <ul>
+        {arr1.map((e)=>{
+          return <li className={e.style}>
+
+            {e.name}
+          </li>
+        })}
+      </ul>
     </div>
   );
 }
